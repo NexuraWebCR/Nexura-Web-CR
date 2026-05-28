@@ -2,10 +2,22 @@ import { Monitor, LayoutTemplate, CalendarDays, Menu, X } from "lucide-react"
 import { useState } from "react"
 import { motion } from "framer-motion"
 export default function App() {
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    alert("Mensaje enviado correctamente 🚀")
-  }
+ const handleSubmit = (e) => {
+  e.preventDefault()
+
+  const nombre = e.target[0].value
+  const email = e.target[1].value
+  const mensaje = e.target[2].value
+
+  const telefono = "50670089891"
+
+  const url = `https://wa.me/${telefono}?text=` +
+    `Hola, soy ${nombre}%0A` +
+    `Correo: ${email}%0A` +
+    `Mensaje: ${mensaje}`
+
+  window.open(url, "_blank")
+}
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
