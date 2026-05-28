@@ -260,7 +260,7 @@ export default function App() {
       <section className="relative z-10 px-8 py-24">
 
         <h3 className="text-5xl font-bold text-center mb-16">
-          Proyectos Destacados
+          ¡Proyectos que pueden crearse para vos!
         </h3>
 
         <div className="grid md:grid-cols-3 gap-8">
