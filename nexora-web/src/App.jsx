@@ -2,7 +2,10 @@ import { Monitor, LayoutTemplate, CalendarDays, Menu, X } from "lucide-react"
 import { useState } from "react"
 import { motion } from "framer-motion"
 export default function App() {
-
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    alert("Mensaje enviado correctamente 🚀")
+  }
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
@@ -22,15 +25,15 @@ export default function App() {
         {/* MENÚ DESKTOP */}
         <div className="hidden md:flex gap-6 text-gray-300">
 
-          <a href="#" className="hover:text-cyan-400 transition">
+          <a href="#inicio" className="hover:text-cyan-400 transition">
             Inicio
           </a>
 
-          <a href="#" className="hover:text-cyan-400 transition">
+          <a href="#servicios" className="hover:text-cyan-400 transition">
             Servicios
           </a>
 
-          <a href="#" className="hover:text-cyan-400 transition">
+          <a href="#contacto" className="hover:text-cyan-400 transition">
             Contacto
           </a>
 
@@ -70,12 +73,12 @@ export default function App() {
       )}
 
       {/* HERO SECTION */}
-      <motion.section
-  initial={{ opacity: 0, y: 60 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 1 }}
-  className="relative z-10 flex flex-col items-center justify-center text-center px-6 py-32"
->
+      <motion.section id="inicio"
+        initial={{ opacity: 0, y: 60 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="relative z-10 flex flex-col items-center justify-center text-center px-6 py-32"
+      >
 
         <h2 className="text-6xl font-black max-w-5xl leading-tight">
 
@@ -91,16 +94,18 @@ export default function App() {
 
         <div className="flex gap-4 mt-10 flex-wrap justify-center">
 
-          <button className="bg-cyan-400 text-black px-8 py-4 rounded-xl font-bold hover:scale-105 transition">
-
+          <button
+            onClick={() => document.getElementById("contacto").scrollIntoView({ behavior: "smooth" })}
+            className="bg-cyan-400 text-black px-8 py-4 rounded-xl font-bold hover:scale-105 transition"
+          >
             Solicitar Cotización
-
           </button>
 
-          <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-xl font-bold hover:bg-cyan-400 hover:text-black transition">
-
+          <button
+            onClick={() => document.getElementById("servicios").scrollIntoView({ behavior: "smooth" })}
+            className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-xl font-bold hover:bg-cyan-400 hover:text-black transition"
+          >
             Ver Servicios
-
           </button>
 
         </div>
@@ -108,7 +113,7 @@ export default function App() {
       </motion.section>
 
       {/* SERVICIOS */}
-      <section className="relative z-10 px-8 pb-24">
+      <section id="servicios" className="relative z-10 px-8 pb-24">
 
         <h3 className="text-4xl font-bold text-center mb-16">
           Nuestros Servicios
@@ -308,7 +313,7 @@ export default function App() {
 
       </section>
       {/* CONTACTO */}
-      <section className="relative z-10 px-8 py-24">
+      <section id="contacto" className="relative z-10 px-8 py-24">
 
         <div className="max-w-4xl mx-auto bg-gray-900/70 backdrop-blur-sm border border-gray-800 rounded-3xl p-10">
 
@@ -320,7 +325,7 @@ export default function App() {
             Cuéntanos sobre tu negocio y te ayudaremos a crear una presencia profesional en internet.
           </p>
 
-          <form className="grid gap-6">
+          <form className="grid gap-6" onSubmit={handleSubmit}>
 
             <input
               type="text"
