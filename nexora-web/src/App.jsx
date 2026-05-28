@@ -2,22 +2,22 @@ import { Monitor, LayoutTemplate, CalendarDays, Menu, X } from "lucide-react"
 import { useState } from "react"
 import { motion } from "framer-motion"
 export default function App() {
- const handleSubmit = (e) => {
-  e.preventDefault()
+  const handleSubmit = (e) => {
+    e.preventDefault()
 
-  const nombre = e.target[0].value
-  const email = e.target[1].value
-  const mensaje = e.target[2].value
+    const nombre = e.target[0].value
+    const email = e.target[1].value
+    const mensaje = e.target[2].value
 
-  const telefono = "50670089891"
+    const telefono = "50670089891"
 
-  const url = `https://wa.me/${telefono}?text=` +
-    `Hola, soy ${nombre}%0A` +
-    `Correo: ${email}%0A` +
-    `Mensaje: ${mensaje}`
+    const url = `https://wa.me/${telefono}?text=` +
+      `Hola, soy ${nombre}%0A` +
+      `Correo: ${email}%0A` +
+      `Mensaje: ${mensaje}`
 
-  window.open(url, "_blank")
-}
+    window.open(url, "_blank")
+  }
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
@@ -255,6 +255,7 @@ export default function App() {
         </div>
 
       </section>
+
       {/* PROYECTOS */}
       <section className="relative z-10 px-8 py-24">
 
@@ -266,8 +267,11 @@ export default function App() {
 
           {/* PROYECTO 1 */}
           <div className="bg-gray-900 border border-gray-800 rounded-3xl overflow-hidden hover:border-cyan-400 transition hover:-translate-y-2 duration-300">
-
-            <div className="h-56 bg-gradient-to-br from-cyan-500 to-blue-700"></div>
+            <img
+              src="/lavacar.png"
+              alt="Lavacar Premium"
+              className="h-56 w-full object-cover"
+            />
 
             <div className="p-8">
 
@@ -280,13 +284,16 @@ export default function App() {
               </p>
 
             </div>
-
           </div>
 
           {/* PROYECTO 2 */}
           <div className="bg-gray-900 border border-gray-800 rounded-3xl overflow-hidden hover:border-cyan-400 transition hover:-translate-y-2 duration-300">
 
-            <div className="h-56 bg-gradient-to-br from-purple-500 to-pink-600"></div>
+            <img
+              src="/barberia.png"
+              alt="Barbería Moderna"
+              className="h-56 w-full object-cover"
+            />
 
             <div className="p-8">
 
@@ -299,13 +306,16 @@ export default function App() {
               </p>
 
             </div>
-
           </div>
 
           {/* PROYECTO 3 */}
           <div className="bg-gray-900 border border-gray-800 rounded-3xl overflow-hidden hover:border-cyan-400 transition hover:-translate-y-2 duration-300">
 
-            <div className="h-56 bg-gradient-to-br from-orange-500 to-red-600"></div>
+            <img
+              src="/restaurante.png"
+              alt="Restaurantes"
+              className="h-56 w-full object-cover"
+            />
 
             <div className="p-8">
 
@@ -318,14 +328,14 @@ export default function App() {
               </p>
 
             </div>
-
           </div>
 
         </div>
 
-      </section>
+      </section >
+
       {/* CONTACTO */}
-      <section id="contacto" className="relative z-10 px-8 py-24">
+      < section id="contacto" className="relative z-10 px-8 py-24" >
 
         <div className="max-w-4xl mx-auto bg-gray-900/70 backdrop-blur-sm border border-gray-800 rounded-3xl p-10">
 
@@ -367,9 +377,9 @@ export default function App() {
 
         </div>
 
-      </section>
+      </section >
       {/* FOOTER */}
-      <footer className="relative z-10 border-t border-gray-800 py-10 px-8 text-center text-gray-500">
+      < footer className="relative z-10 border-t border-gray-800 py-10 px-8 text-center text-gray-500" >
 
         <h4 className="text-2xl font-bold text-cyan-400 mb-4">
           Nexora Web CR
@@ -383,16 +393,16 @@ export default function App() {
           © 2026 Nexora Web CR - Todos los derechos reservados
         </p>
 
-      </footer>
+      </footer >
 
       {/* BOTÓN WHATSAPP */}
-      <a
+      < a
         href="https://wa.me/50670089891"
         target="_blank"
         className="fixed bottom-6 right-6 bg-cyan-400 text-black px-6 py-4 rounded-full font-bold shadow-2xl hover:scale-110 transition z-50"
       >
         WhatsApp
-      </a>
-    </div>
+      </a >
+    </div >
   )
 }
