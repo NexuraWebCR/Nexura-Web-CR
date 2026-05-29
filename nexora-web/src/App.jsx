@@ -287,7 +287,7 @@ export default function App() {
 
                     <div className="bg-gray-900 border border-gray-800 rounded-3xl p-6 md:p-8 text-center hover:border-cyan-400 transition overflow-hidden">
 
-                        <h4 className="text-2xl md:text-5xl font-black text-cyan-400 break-words">
+                        <h4 className="text-xl md:text-5xl font-black text-cyan-400">
                             Moderno
                         </h4>
 
