@@ -1,7 +1,6 @@
 import { Menu, X } from "lucide-react"
 import { useState } from "react"
 import { motion } from "framer-motion"
-import Particles from "react-tsparticles"
 export default function App() {
 
     const handleSubmit = (e) => {
@@ -27,51 +26,19 @@ export default function App() {
     return (
 
         <div className="relative min-h-screen bg-black text-white overflow-hidden">
-            <Particles
-                className="absolute inset-0 z-[1]"
-                options={{
-                    fullScreen: {
-                        enable: false
-                    },
+            <div className="absolute inset-0 overflow-hidden">
 
-                    background: {
-                        color: {
-                            value: "transparent",
-                        },
-                    },
+                <div className="absolute top-20 left-20 w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
 
-                    particles: {
-                        number: {
-                            value: 180,
-                        },
+                <div className="absolute top-40 right-40 w-3 h-3 bg-purple-500 rounded-full animate-ping"></div>
 
-                        color: {
-                            value: ["#00ffff", "#3b82f6", "#a855f7"],
-                        },
+                <div className="absolute bottom-32 left-1/3 w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
 
-                        links: {
-                            enable: true,
-                            distance: 150,
-                            color: "#00ffff",
-                            opacity: 0.2,
-                            width: 1,
-                        },
+                <div className="absolute top-1/2 right-1/4 w-4 h-4 bg-cyan-300 rounded-full blur-sm animate-pulse"></div>
 
-                        move: {
-                            enable: true,
-                            speed: 1,
-                        },
+                <div className="absolute bottom-20 right-20 w-2 h-2 bg-purple-400 rounded-full animate-ping"></div>
 
-                        opacity: {
-                            value: 0.9,
-                        },
-
-                        size: {
-                            value: { min: 2, max: 6 },
-                        },
-                    },
-                }}
-            />
+            </div>
             {/* FONDO */}
             <div className="absolute top-0 left-0 w-96 h-96 bg-cyan-500/20 blur-3xl rounded-full"></div>
 
