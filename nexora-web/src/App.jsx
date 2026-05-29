@@ -247,83 +247,81 @@ export default function App() {
             <section className="relative z-10 px-8 py-24">
 
                 <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+                </div>
+                {/* TEXTO */}
+                <div>
 
-                    {/* TEXTO */}
-                    <div>
+                    <h3 className="text-5xl font-bold mb-8">
+                        Impulsamos negocios en internet
+                    </h3>
 
-                        <h3 className="text-5xl font-bold mb-8">
-                            Impulsamos negocios en internet
-                        </h3>
+                    <p className="text-gray-400 text-lg leading-relaxed mb-6">
 
-                        <p className="text-gray-400 text-lg leading-relaxed mb-6">
+                        En Nexora Web CR desarrollamos páginas web modernas y profesionales para emprendimientos y negocios que buscan destacar en internet y atraer más clientes.
 
-                            En Nexora Web CR desarrollamos páginas web modernas y profesionales para emprendimientos y negocios que buscan destacar en internet y atraer más clientes.
+                    </p>
 
-                        </p>
+                    <p className="text-gray-400 text-lg leading-relaxed">
 
-                        <p className="text-gray-400 text-lg leading-relaxed">
+                        Nuestro objetivo es crear experiencias visuales atractivas, rápidas y adaptadas para cualquier dispositivo.
 
-                            Nuestro objetivo es crear experiencias visuales atractivas, rápidas y adaptadas para cualquier dispositivo.
+                    </p>
 
+                </div>
+
+
+                {/* TARJETAS */}
+                <div className="grid grid-cols-2 gap-4 md:gap-6">
+
+                    <div className="bg-gray-900 border border-gray-800 rounded-3xl p-6 md:p-8 text-center hover:border-cyan-400 transition overflow-hidden">
+
+                        <h4 className="text-3xl md:text-5xl font-black text-cyan-400 break-words">
+                            100%
+                        </h4>
+
+                        <p className="text-gray-400 mt-4 text-sm md:text-base">
+                            Diseño Responsive
                         </p>
 
                     </div>
 
-                    {/* TARJETAS */}
-                    <div className="grid grid-cols-2 gap-6">
+                    <div className="bg-gray-900 border border-gray-800 rounded-3xl p-6 md:p-8 text-center hover:border-cyan-400 transition overflow-hidden">
 
-                        <div className="bg-gray-900 border border-gray-800 rounded-3xl p-8 text-center hover:border-cyan-400 transition">
+                        <h4 className="text-2xl md:text-5xl font-black text-cyan-400 break-words">
+                            Moderno
+                        </h4>
 
-                            <h4 className="text-5xl font-black text-cyan-400">
-                                100%
-                            </h4>
+                        <p className="text-gray-400 mt-4 text-sm md:text-base">
+                            Diseño Premium
+                        </p>
 
-                            <p className="text-gray-400 mt-4">
-                                Diseño Responsive
-                            </p>
+                    </div>
 
-                        </div>
+                    <div className="bg-gray-900 border border-gray-800 rounded-3xl p-6 md:p-8 text-center hover:border-cyan-400 transition overflow-hidden">
 
-                        <div className="bg-gray-900 border border-gray-800 rounded-3xl p-8 text-center hover:border-cyan-400 transition">
+                        <h4 className="text-2xl md:text-5xl font-black text-cyan-400 break-words">
+                            Rápido
+                        </h4>
 
-                            <h4 className="text-5xl font-black text-cyan-400">
-                                Moderno
-                            </h4>
+                        <p className="text-gray-400 mt-4 text-sm md:text-base">
+                            Optimización Web
+                        </p>
 
-                            <p className="text-gray-400 mt-4">
-                                Diseño Premium
-                            </p>
+                    </div>
 
-                        </div>
+                    <div className="bg-gray-900 border border-gray-800 rounded-3xl p-6 md:p-8 text-center hover:border-cyan-400 transition overflow-hidden">
 
-                        <div className="bg-gray-900 border border-gray-800 rounded-3xl p-8 text-center hover:border-cyan-400 transition">
+                        <h4 className="text-2xl md:text-5xl font-black text-cyan-400 break-words">
+                            Soporte
+                        </h4>
 
-                            <h4 className="text-5xl font-black text-cyan-400">
-                                Rápido
-                            </h4>
-
-                            <p className="text-gray-400 mt-4">
-                                Optimización Web
-                            </p>
-
-                        </div>
-
-                        <div className="bg-gray-900 border border-gray-800 rounded-3xl p-8 text-center hover:border-cyan-400 transition">
-
-                            <h4 className="text-5xl font-black text-cyan-400">
-                                Soporte
-                            </h4>
-
-                            <p className="text-gray-400 mt-4">
-                                Atención Personalizada
-                            </p>
-
-                        </div>
+                        <p className="text-gray-400 mt-4 text-sm md:text-base">
+                            Atención Personalizada
+                        </p>
 
                     </div>
 
                 </div>
-
             </section>
             {/* PROYECTOS */}
             <div className="absolute top-[1700px] right-[-200px] w-[500px] h-[500px] bg-cyan-500/10 blur-3xl rounded-full"></div>
@@ -415,10 +413,10 @@ export default function App() {
             {/* CONTACTO */}
             <section
                 id="contacto"
-                className="relative z-10 px-8 py-24"
+                className="relative z-10 px-4 md:px-8 py-24"
             >
 
-                <div className="max-w-4xl mx-auto bg-gray-900/70 backdrop-blur-sm border border-gray-800 rounded-3xl p-10">
+                <div className="w-full max-w-4xl mx-auto bg-gray-900/70 backdrop-blur-sm border border-gray-800 rounded-3xl p-5 md:p-10 overflow-hidden">
 
                     <h3 className="text-5xl font-bold text-center mb-6">
                         Hablemos de tu proyecto
@@ -433,19 +431,19 @@ export default function App() {
                         <input
                             type="text"
                             placeholder="Nombre completo"
-                            className="bg-black border border-gray-700 rounded-xl px-6 py-4 text-white outline-none focus:border-cyan-400 transition"
+                            className="bg-black border border-gray-700 rounded-xl px-4 md:px-6 py-4 w-full text-white outline-none focus:border-cyan-400 transition"
                         />
 
                         <input
                             type="email"
                             placeholder="Correo electrónico"
-                            className="bg-black border border-gray-700 rounded-xl px-6 py-4 text-white outline-none focus:border-cyan-400 transition"
+                            className="bg-black border border-gray-700 rounded-xl px-4 md:px-6 py-4 w-full text-white outline-none focus:border-cyan-400 transition"
                         />
 
                         <textarea
                             placeholder="Cuéntanos sobre tu proyecto..."
                             rows="6"
-                            className="bg-black border border-gray-700 rounded-xl px-6 py-4 text-white outline-none focus:border-cyan-400 transition resize-none"
+                            className="bg-black border border-gray-700 rounded-xl px-4 md:px-6 py-4 w-full text-white outline-none focus:border-cyan-400 transition resize-none"
                         ></textarea>
 
                         <button
