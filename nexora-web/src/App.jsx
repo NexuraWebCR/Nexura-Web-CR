@@ -1,4 +1,4 @@
-import { Monitor, LayoutTemplate, CalendarDays, Menu, X } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import { useState } from "react"
 import { motion } from "framer-motion"
 
@@ -13,7 +13,8 @@ export default function App() {
 
         const telefono = "50670089891"
 
-        const url = `https://wa.me/${telefono}?text=` +
+        const url =
+            `https://wa.me/${telefono}?text=` +
             `Hola, soy ${nombre}%0A` +
             `Correo: ${email}%0A` +
             `Mensaje: ${mensaje}`
@@ -27,44 +28,42 @@ export default function App() {
 
         <div className="min-h-screen bg-black text-white overflow-hidden">
 
-            {/* FONDO DIFUMINADO */}
+            {/* FONDO */}
             <div className="absolute top-0 left-0 w-96 h-96 bg-cyan-500/20 blur-3xl rounded-full"></div>
 
-            <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/20 blur-3xl rounded-full"></div>
+            <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/20 blur-3xl rounded-full"></div>
 
             {/* NAVBAR */}
             <nav className="
-relative
-z-10
-flex
-items-center
-justify-between
-px-8
-py-7
-border-b
-border-cyan-500/10
-bg-black/60
-backdrop-blur-2xl
-shadow-[0_0_45px_rgba(59,130,246,0.12)]
-">
+      relative
+      z-10
+      flex
+      items-center
+      justify-between
+      px-8
+      py-5
+      border-b
+      border-cyan-500/10
+      bg-black/50
+      backdrop-blur-xl
+      ">
+
                 {/* LOGO */}
                 <div className="flex flex-col items-start select-none">
 
                     <h1
                         className="
-    text-5xl
-    md:text-6xl
-    font-black
-    uppercase
-    leading-none
-    transition-all
-    duration-500
-    hover:scale-105
-    "
+            text-3xl
+            md:text-5xl
+            font-black
+            uppercase
+            leading-none
+            "
                         style={{
                             fontFamily: "'Orbitron', sans-serif",
                             letterSpacing: "0.18em",
-                            background: "linear-gradient(90deg, #67e8f9 0%, #3b82f6 45%, #a855f7 100%)",
+                            background:
+                                "linear-gradient(90deg, #67e8f9 0%, #3b82f6 45%, #a855f7 100%)",
                             WebkitBackgroundClip: "text",
                             WebkitTextFillColor: "transparent",
                             textShadow: "0 0 18px rgba(59,130,246,0.45)"
@@ -73,25 +72,21 @@ shadow-[0_0_45px_rgba(59,130,246,0.12)]
                         NEXORA
                     </h1>
 
-                    <div className="w-full flex justify-center mt-1">
-
-                        <p
-                            className="
-      text-ml
-      uppercase
-      font-bold
-      "
-                            style={{
-                                fontFamily: "'Orbitron', sans-serif",
-                                letterSpacing: "0.55em",
-                                color: "#c084fc",
-                                textShadow: "0 0 10px rgba(168,85,247,0.7)"
-                            }}
-                        >
-                            WEB CR
-                        </p>
-
-                    </div>
+                    <p
+                        className="
+            text-sm
+            uppercase
+            font-bold
+            ml-1
+            "
+                        style={{
+                            fontFamily: "'Orbitron', sans-serif",
+                            letterSpacing: "0.5em",
+                            color: "#c084fc"
+                        }}
+                    >
+                        WEB CR
+                    </p>
 
                 </div>
 
@@ -129,15 +124,15 @@ shadow-[0_0_45px_rgba(59,130,246,0.12)]
 
                 <div className="md:hidden bg-gray-900 border-b border-gray-800 px-8 py-6 flex flex-col gap-6 text-gray-300">
 
-                    <a href="#" className="hover:text-cyan-400 transition">
+                    <a href="#inicio" className="hover:text-cyan-400 transition">
                         Inicio
                     </a>
 
-                    <a href="#" className="hover:text-cyan-400 transition">
+                    <a href="#servicios" className="hover:text-cyan-400 transition">
                         Servicios
                     </a>
 
-                    <a href="#" className="hover:text-cyan-400 transition">
+                    <a href="#contacto" className="hover:text-cyan-400 transition">
                         Contacto
                     </a>
 
@@ -154,7 +149,7 @@ shadow-[0_0_45px_rgba(59,130,246,0.12)]
                 className="relative z-10 flex flex-col items-center justify-center text-center px-6 py-32"
             >
 
-                <h2 className="text-6xl font-black max-w-5xl leading-tight">
+                <h2 className="text-5xl md:text-6xl font-black max-w-5xl leading-tight">
 
                     Diseñamos páginas web modernas para negocios que quieren crecer
 
@@ -169,14 +164,22 @@ shadow-[0_0_45px_rgba(59,130,246,0.12)]
                 <div className="flex gap-4 mt-10 flex-wrap justify-center">
 
                     <button
-                        onClick={() => document.getElementById("contacto").scrollIntoView({ behavior: "smooth" })}
+                        onClick={() =>
+                            document
+                                .getElementById("contacto")
+                                .scrollIntoView({ behavior: "smooth" })
+                        }
                         className="bg-cyan-400 text-black px-8 py-4 rounded-xl font-bold hover:scale-105 transition"
                     >
                         Solicitar Cotización
                     </button>
 
                     <button
-                        onClick={() => document.getElementById("servicios").scrollIntoView({ behavior: "smooth" })}
+                        onClick={() =>
+                            document
+                                .getElementById("servicios")
+                                .scrollIntoView({ behavior: "smooth" })
+                        }
                         className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-xl font-bold hover:bg-cyan-400 hover:text-black transition"
                     >
                         Ver Servicios
@@ -186,6 +189,218 @@ shadow-[0_0_45px_rgba(59,130,246,0.12)]
 
             </motion.section>
 
+            {/* SERVICIOS */}
+            <section
+                id="servicios"
+                className="relative z-10 px-8 pb-24"
+            >
+
+                <h3 className="text-4xl font-bold text-center mb-16">
+                    Nuestros Servicios
+                </h3>
+
+                <div className="grid md:grid-cols-3 gap-8">
+
+                    <div className="bg-gray-900 border border-gray-800 rounded-3xl p-8 hover:border-cyan-400 transition">
+
+                        <h4 className="text-2xl font-bold mb-4 text-cyan-400">
+                            Páginas Web
+                        </h4>
+
+                        <p className="text-gray-400">
+                            Diseños modernos y profesionales adaptados para celulares y computadoras.
+                        </p>
+
+                    </div>
+
+                    <div className="bg-gray-900 border border-gray-800 rounded-3xl p-8 hover:border-cyan-400 transition">
+
+                        <h4 className="text-2xl font-bold mb-4 text-cyan-400">
+                            Landing Pages
+                        </h4>
+
+                        <p className="text-gray-400">
+                            Páginas enfocadas en atraer clientes y generar más ventas.
+                        </p>
+
+                    </div>
+
+                    <div className="bg-gray-900 border border-gray-800 rounded-3xl p-8 hover:border-cyan-400 transition">
+
+                        <h4 className="text-2xl font-bold mb-4 text-cyan-400">
+                            Sistemas de Citas
+                        </h4>
+
+                        <p className="text-gray-400">
+                            Formularios y reservas online para negocios modernos.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+            {/* PROYECTOS */}
+            <section className="relative z-10 px-8 py-24">
+
+                <h3 className="text-5xl font-bold text-center mb-6">
+                    Estos proyectos pueden ser para vos
+                </h3>
+
+                <p className="text-center text-gray-400 max-w-2xl mx-auto mb-16">
+                    Diseños modernos y profesionales adaptados para diferentes tipos de negocios y emprendimientos.
+                </p>
+
+                <div className="grid md:grid-cols-3 gap-8">
+
+                    {/* PROYECTO 1 */}
+                    <div className="bg-gray-900 border border-gray-800 rounded-3xl overflow-hidden hover:border-cyan-400 transition hover:-translate-y-2 duration-300">
+
+                        <img
+                            src="/lavacar.png"
+                            alt="Lavacar Premium"
+                            className="h-56 w-full object-cover"
+                        />
+
+                        <div className="p-8">
+
+                            <h4 className="text-2xl font-bold mb-4 text-cyan-400">
+                                Lavacar Premium
+                            </h4>
+
+                            <p className="text-gray-400">
+                                Diseño moderno para un negocio automotriz con reservas y contacto rápido por WhatsApp.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    {/* PROYECTO 2 */}
+                    <div className="bg-gray-900 border border-gray-800 rounded-3xl overflow-hidden hover:border-cyan-400 transition hover:-translate-y-2 duration-300">
+
+                        <img
+                            src="/barberia.png"
+                            alt="Barbería Moderna"
+                            className="h-56 w-full object-cover"
+                        />
+
+                        <div className="p-8">
+
+                            <h4 className="text-2xl font-bold mb-4 text-cyan-400">
+                                Barbería Moderna
+                            </h4>
+
+                            <p className="text-gray-400">
+                                Página elegante enfocada en reservas y presencia digital para barberías.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    {/* PROYECTO 3 */}
+                    <div className="bg-gray-900 border border-gray-800 rounded-3xl overflow-hidden hover:border-cyan-400 transition hover:-translate-y-2 duration-300">
+
+                        <img
+                            src="/restaurante.png"
+                            alt="Restaurante"
+                            className="h-56 w-full object-cover"
+                        />
+
+                        <div className="p-8">
+
+                            <h4 className="text-2xl font-bold mb-4 text-cyan-400">
+                                Restaurantes
+                            </h4>
+
+                            <p className="text-gray-400">
+                                Sitios web modernos con menú digital y contacto rápido para restaurantes.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            {/* CONTACTO */}
+            <section
+                id="contacto"
+                className="relative z-10 px-8 py-24"
+            >
+
+                <div className="max-w-4xl mx-auto bg-gray-900/70 backdrop-blur-sm border border-gray-800 rounded-3xl p-10">
+
+                    <h3 className="text-5xl font-bold text-center mb-6">
+                        Hablemos de tu proyecto
+                    </h3>
+
+                    <p className="text-center text-gray-400 mb-12">
+                        Cuéntanos sobre tu negocio y te ayudaremos a crear una presencia profesional en internet.
+                    </p>
+
+                    <form className="grid gap-6" onSubmit={handleSubmit}>
+
+                        <input
+                            type="text"
+                            placeholder="Nombre completo"
+                            className="bg-black border border-gray-700 rounded-xl px-6 py-4 text-white outline-none focus:border-cyan-400 transition"
+                        />
+
+                        <input
+                            type="email"
+                            placeholder="Correo electrónico"
+                            className="bg-black border border-gray-700 rounded-xl px-6 py-4 text-white outline-none focus:border-cyan-400 transition"
+                        />
+
+                        <textarea
+                            placeholder="Cuéntanos sobre tu proyecto..."
+                            rows="6"
+                            className="bg-black border border-gray-700 rounded-xl px-6 py-4 text-white outline-none focus:border-cyan-400 transition resize-none"
+                        ></textarea>
+
+                        <button
+                            className="bg-cyan-400 text-black py-4 rounded-xl font-bold hover:scale-105 transition"
+                        >
+                            Enviar Mensaje
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </section>
+
+            {/* FOOTER */}
+            <footer className="relative z-10 border-t border-gray-800 py-10 px-8 text-center text-gray-500">
+
+                <h4 className="text-2xl font-bold text-cyan-400 mb-4">
+                    Nexora Web CR
+                </h4>
+
+                <p>
+                    Diseño y desarrollo web profesional para negocios y emprendimientos.
+                </p>
+
+                <p className="mt-4 text-sm">
+                    © 2026 Nexora Web CR - Todos los derechos reservados
+                </p>
+
+            </footer>
+
+            {/* BOTÓN WHATSAPP */}
+            <a
+                href="https://wa.me/50670089891"
+                target="_blank"
+                className="fixed bottom-6 right-6 bg-cyan-400 text-black px-6 py-4 rounded-full font-bold shadow-2xl hover:scale-110 transition z-50"
+            >
+                WhatsApp
+            </a>
+
         </div>
+
     )
 }
