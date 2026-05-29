@@ -243,7 +243,88 @@ export default function App() {
                 </div>
 
             </section>
+            {/* SOBRE NOSOTROS */}
+            <section className="relative z-10 px-8 py-24">
 
+                <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+
+                    {/* TEXTO */}
+                    <div>
+
+                        <h3 className="text-5xl font-bold mb-8">
+                            Impulsamos negocios en internet
+                        </h3>
+
+                        <p className="text-gray-400 text-lg leading-relaxed mb-6">
+
+                            En Nexora Web CR desarrollamos páginas web modernas y profesionales para emprendimientos y negocios que buscan destacar en internet y atraer más clientes.
+
+                        </p>
+
+                        <p className="text-gray-400 text-lg leading-relaxed">
+
+                            Nuestro objetivo es crear experiencias visuales atractivas, rápidas y adaptadas para cualquier dispositivo.
+
+                        </p>
+
+                    </div>
+
+                    {/* TARJETAS */}
+                    <div className="grid grid-cols-2 gap-6">
+
+                        <div className="bg-gray-900 border border-gray-800 rounded-3xl p-8 text-center hover:border-cyan-400 transition">
+
+                            <h4 className="text-5xl font-black text-cyan-400">
+                                100%
+                            </h4>
+
+                            <p className="text-gray-400 mt-4">
+                                Diseño Responsive
+                            </p>
+
+                        </div>
+
+                        <div className="bg-gray-900 border border-gray-800 rounded-3xl p-8 text-center hover:border-cyan-400 transition">
+
+                            <h4 className="text-5xl font-black text-cyan-400">
+                                Moderno
+                            </h4>
+
+                            <p className="text-gray-400 mt-4">
+                                Diseño Premium
+                            </p>
+
+                        </div>
+
+                        <div className="bg-gray-900 border border-gray-800 rounded-3xl p-8 text-center hover:border-cyan-400 transition">
+
+                            <h4 className="text-5xl font-black text-cyan-400">
+                                Rápido
+                            </h4>
+
+                            <p className="text-gray-400 mt-4">
+                                Optimización Web
+                            </p>
+
+                        </div>
+
+                        <div className="bg-gray-900 border border-gray-800 rounded-3xl p-8 text-center hover:border-cyan-400 transition">
+
+                            <h4 className="text-5xl font-black text-cyan-400">
+                                Soporte
+                            </h4>
+
+                            <p className="text-gray-400 mt-4">
+                                Atención Personalizada
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
             {/* PROYECTOS */}
             <div className="absolute top-[1700px] right-[-200px] w-[500px] h-[500px] bg-cyan-500/10 blur-3xl rounded-full"></div>
             <section className="relative z-10 px-8 py-24">
