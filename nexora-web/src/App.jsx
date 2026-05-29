@@ -619,7 +619,7 @@ export default function App() {
                 </div>
 
                 <div className="grid md:grid-cols-3 gap-8">
-                    
+
                     {/* CARTA 1: CONVERSIÓN */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
