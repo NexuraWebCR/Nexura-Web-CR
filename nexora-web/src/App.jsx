@@ -1,7 +1,7 @@
 import { Menu, X } from "lucide-react"
 import { useState } from "react"
 import { motion } from "framer-motion"
-
+import Particles from "react-tsparticles"
 export default function App() {
 
     const handleSubmit = (e) => {
@@ -26,8 +26,52 @@ export default function App() {
 
     return (
 
-        <div className="min-h-screen bg-black text-white overflow-hidden">
+        <div className="relative min-h-screen bg-black text-white overflow-hidden">
+            <Particles
+                className="absolute inset-0 z-[1]"
+                options={{
+                    fullScreen: {
+                        enable: false
+                    },
 
+                    background: {
+                        color: {
+                            value: "transparent",
+                        },
+                    },
+
+                    particles: {
+                        number: {
+                            value: 180,
+                        },
+
+                        color: {
+                            value: ["#00ffff", "#3b82f6", "#a855f7"],
+                        },
+
+                        links: {
+                            enable: true,
+                            distance: 150,
+                            color: "#00ffff",
+                            opacity: 0.2,
+                            width: 1,
+                        },
+
+                        move: {
+                            enable: true,
+                            speed: 1,
+                        },
+
+                        opacity: {
+                            value: 0.9,
+                        },
+
+                        size: {
+                            value: { min: 2, max: 6 },
+                        },
+                    },
+                }}
+            />
             {/* FONDO */}
             <div className="absolute top-0 left-0 w-96 h-96 bg-cyan-500/20 blur-3xl rounded-full"></div>
 
@@ -74,10 +118,10 @@ export default function App() {
 
                     <p
                         className="
-            text-sm
+            text-ml
             uppercase
             font-bold
-            ml-1
+            self-center
             "
                         style={{
                             fontFamily: "'Orbitron', sans-serif",
