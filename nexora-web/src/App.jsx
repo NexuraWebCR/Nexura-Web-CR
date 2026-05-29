@@ -95,18 +95,18 @@ export default function App() {
             whatsappMsg: "Hola Nexora Web, vi el proyecto de Lavacar Premium y me gustaría cotizar algo similar para mi negocio."
         },
         {
-            title: "Barbería Alpha",
+            title: "Barbería",
             description: "Página web elegante para agendamiento de citas, galería interactiva de cortes en alta definición y mapa de ubicación integrada.",
             image: "/barberia.png",
             tags: ["React", "Framer Motion", "Tailwind", "Responsive"],
-            whatsappMsg: "Hola Nexora Web, me encantó el diseño de la Barbería Alpha y quiero cotizar una web moderna con sistema de citas."
+            whatsappMsg: "Hola Nexora Web, me encantó el diseño de la Barbería y quiero cotizar una web moderna con sistema de citas."
         },
         {
-            title: "Bistro del Sol",
+            title: "Restaurante",
             description: "Menú gastronómico digital interactivo con categorías dinámicas y llamado directo a pedidos, ideal para restaurantes modernos.",
             image: "/restaurante.png",
             tags: ["Next.js", "Glassmorphism", "Delivery Link", "Menu Digital"],
-            whatsappMsg: "Hola Nexora Web, estoy interesado en una página web para mi restaurante similar al proyecto Bistro del Sol."
+            whatsappMsg: "Hola Nexora Web, estoy interesado en una página web para mi restaurante similar al proyecto Restaurante."
         }
     ]
 
@@ -163,19 +163,19 @@ export default function App() {
                     {/* LOGO */}
                     <a href="#inicio" className="flex flex-col items-start select-none group">
                         <h1
-                            className="text-2xl md:text-3xl font-black uppercase leading-none tracking-wider transition-all duration-300 group-hover:scale-102"
+                            className="text-4xl md:text-5xl font-black uppercase leading-none tracking-wider transition-all duration-300 group-hover:scale-102"
                             style={{
                                 fontFamily: "'Orbitron', sans-serif",
                                 background: "linear-gradient(90deg, #22d3ee 0%, #3b82f6 50%, #a855f7 100%)",
                                 WebkitBackgroundClip: "text",
                                 WebkitTextFillColor: "transparent",
-                                textShadow: "0 0 25px rgba(59,130,246,0.3)"
+                                textShadow: "0 0 30px rgba(59,130,246,0.4)"
                             }}
                         >
                             NEXORA
                         </h1>
                         <p
-                            className="text-xs uppercase font-extrabold tracking-[0.45em] self-center ml-1 text-purple-400"
+                            className="text-sm uppercase font-extrabold tracking-[0.45em] self-center ml-1 text-purple-400"
                             style={{ fontFamily: "'Orbitron', sans-serif" }}
                         >
                             WEB CR
