@@ -121,20 +121,17 @@ export default function App() {
         {
             name: "Carlos Monge",
             role: "Propietario, Lavacar Premium",
-            comment: "Nexora Web transformó totalmente la cara digital de nuestro lavacar. El diseño es increíblemente rápido y el sistema de reservas por WhatsApp nos ayudó a aumentar las citas mensuales en más de un 40%.",
-            image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=120"
+            comment: "Nexora Web transformó totalmente la cara digital de nuestro lavacar. El diseño es increíblemente rápido y el sistema de reservas por WhatsApp nos ayudó a aumentar las citas mensuales en más de un 40%."
         },
         {
             name: "Andrey Salazar",
             role: "Fundador, Barbería Alpha",
-            comment: "Excelente servicio y soporte constante. Mis clientes siempre comentan lo limpia y moderna que es la web. Agendar una cita ahora es cuestión de segundos directamente desde sus celulares.",
-            image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=120"
+            comment: "Excelente servicio y soporte constante. Mis clientes siempre comentan lo limpia y moderna que es la web. Agendar una cita ahora es cuestión de segundos directamente desde sus celulares."
         },
         {
             name: "Sofía Rodríguez",
             role: "Administradora, Bistro del Sol",
-            comment: "Buscábamos un menú digital moderno y dinámico y Nexora superó nuestras expectativas. Tuvimos soporte desde el primer día y el resultado ha sido clave para nuestra presencia en redes sociales.",
-            image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=120"
+            comment: "Buscábamos un menú digital moderno y dinámico y Nexora superó nuestras expectativas. Tuvimos soporte desde el primer día y el resultado ha sido clave para nuestra presencia en redes sociales."
         }
     ]
 
@@ -661,16 +658,9 @@ export default function App() {
                             </div>
 
                             {/* PERFIL */}
-                            <div className="flex items-center gap-4 pt-4 border-t border-slate-900">
-                                <img
-                                    src={test.image}
-                                    alt={test.name}
-                                    className="w-10 h-10 rounded-full object-cover border border-slate-800"
-                                />
-                                <div>
-                                    <h5 className="font-bold text-slate-200 text-sm">{test.name}</h5>
-                                    <p className="text-xs text-purple-400 font-medium">{test.role}</p>
-                                </div>
+                            <div className="pt-4 border-t border-slate-900">
+                                <h5 className="font-bold text-slate-200 text-sm">{test.name}</h5>
+                                <p className="text-xs text-purple-400 font-medium mt-0.5">{test.role}</p>
                             </div>
 
                         </motion.div>
