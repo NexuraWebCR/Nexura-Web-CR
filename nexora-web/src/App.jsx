@@ -117,23 +117,7 @@ export default function App() {
         { value: "24/7", label: "Soporte Continuo", desc: "Atención personalizada posventa" }
     ]
 
-    const testimonials = [
-        {
-            name: "Carlos Monge",
-            role: "Propietario, Lavacar Premium",
-            comment: "Nexora Web transformó totalmente la cara digital de nuestro lavacar. El diseño es increíblemente rápido y el sistema de reservas por WhatsApp nos ayudó a aumentar las citas mensuales en más de un 40%."
-        },
-        {
-            name: "Andrey Salazar",
-            role: "Fundador, Barbería Alpha",
-            comment: "Excelente servicio y soporte constante. Mis clientes siempre comentan lo limpia y moderna que es la web. Agendar una cita ahora es cuestión de segundos directamente desde sus celulares."
-        },
-        {
-            name: "Sofía Rodríguez",
-            role: "Administradora, Bistro del Sol",
-            comment: "Buscábamos un menú digital moderno y dinámico y Nexora superó nuestras expectativas. Tuvimos soporte desde el primer día y el resultado ha sido clave para nuestra presencia en redes sociales."
-        }
-    ]
+
 
     const faqs = [
         {
@@ -209,8 +193,8 @@ export default function App() {
                         <a href="#proyectos" className="hover:text-cyan-400 transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-cyan-400 hover:after:w-full after:transition-all after:duration-300">
                             Proyectos
                         </a>
-                        <a href="#opiniones" className="hover:text-cyan-400 transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-cyan-400 hover:after:w-full after:transition-all after:duration-300">
-                            Opiniones
+                        <a href="#propuesta" className="hover:text-cyan-400 transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-cyan-400 hover:after:w-full after:transition-all after:duration-300">
+                            ¿Por qué elegirnos?
                         </a>
                         <a href="#contacto" className="hover:text-cyan-400 transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-cyan-400 hover:after:w-full after:transition-all after:duration-300">
                             Contacto
@@ -259,8 +243,8 @@ export default function App() {
                         <a href="#proyectos" onClick={() => setMenuOpen(false)} className="text-lg font-medium hover:text-cyan-400 transition py-1 border-b border-slate-900">
                             Proyectos
                         </a>
-                        <a href="#opiniones" onClick={() => setMenuOpen(false)} className="text-lg font-medium hover:text-cyan-400 transition py-1 border-b border-slate-900">
-                            Opiniones
+                        <a href="#propuesta" onClick={() => setMenuOpen(false)} className="text-lg font-medium hover:text-cyan-400 transition py-1 border-b border-slate-900">
+                            ¿Por qué elegirnos?
                         </a>
                         <a href="#contacto" onClick={() => setMenuOpen(false)} className="text-lg font-medium hover:text-cyan-400 transition py-1">
                             Contacto
@@ -616,55 +600,77 @@ export default function App() {
             </section>
 
             {/* NUEVA: SECCIÓN DE TESTIMONIOS (OPINIONES) */}
+            {/* SECCIÓN POR QUÉ ELEGIRNOS */}
             <section
-                id="opiniones"
+                id="propuesta"
                 className="relative z-10 px-6 md:px-8 py-20 max-w-7xl mx-auto"
             >
                 <div className="text-center mb-16">
-                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-purple-500/30 bg-purple-950/20 text-purple-400 text-xs font-semibold uppercase tracking-wider mb-4">
-                        <Star size={12} className="fill-purple-400" />
-                        Opiniones Reales
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-purple-500/30 bg-purple-950/20 text-purple-400 text-xs font-semibold uppercase tracking-wider mb-4 animate-pulse">
+                        <Sparkles size={12} />
+                        Nuestra Filosofía
                     </div>
                     <h3 className="text-3xl md:text-5xl font-extrabold tracking-tight">
-                        Clientes que confían en Nexora
+                        ¿Por qué elegir Nexora Web?
                     </h3>
-                    <p className="text-slate-400 mt-4 max-w-2xl mx-auto font-light">
-                        La mejor carta de presentación es el éxito y la satisfacción de quienes ya trabajan con nosotros.
+                    <p className="text-slate-400 mt-5 max-w-3xl mx-auto font-light text-base md:text-lg leading-relaxed">
+                        Tu sitio web no es solo un gasto o una tarjeta de presentación digital; <span className="text-cyan-400 font-semibold">es el mejor vendedor de tu negocio, disponible las 24 horas del día.</span> No creamos páginas genéricas; diseñamos herramientas de conversión rápidas, seguras y optimizadas que atraen clientes de verdad.
                     </p>
                 </div>
 
                 <div className="grid md:grid-cols-3 gap-8">
-                    {testimonials.map((test, i) => (
-                        <motion.div
-                            key={i}
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.4, delay: i * 0.1 }}
-                            className="bg-slate-950/30 border border-slate-800/80 rounded-3xl p-8 backdrop-blur-sm flex flex-col justify-between hover:border-purple-500/20 transition-colors"
-                        >
-                            <div>
+                    
+                    {/* CARTA 1: CONVERSIÓN */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.1 }}
+                        className="bg-slate-950/30 border border-slate-800/80 rounded-3xl p-8 backdrop-blur-sm hover:border-cyan-500/30 hover:bg-slate-950/60 transition-all duration-300 group"
+                    >
+                        <div className="w-12 h-12 rounded-xl bg-cyan-950/50 border border-cyan-500/20 flex items-center justify-center text-cyan-400 mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <Rocket size={22} />
+                        </div>
+                        <h4 className="text-xl font-bold text-slate-200 mb-3 group-hover:text-cyan-400 transition-colors">Enfoque 100% en Ventas</h4>
+                        <p className="text-slate-400 text-sm font-light leading-relaxed">
+                            No diseñamos para que solo "se vea bonito". Estructuramos estratégicamente llamados a la acción claros, botones de WhatsApp flotantes de alta conversión y flujos de usuario intuitivos pensados para aumentar tu facturación desde el primer día.
+                        </p>
+                    </motion.div>
 
-                                {/* CALIFICACIÓN EN ESTRELLAS */}
-                                <div className="flex gap-1 mb-5">
-                                    {[...Array(5)].map((_, idx) => (
-                                        <Star key={idx} size={16} className="text-amber-400 fill-amber-400" />
-                                    ))}
-                                </div>
+                    {/* CARTA 2: VELOCIDAD */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                        className="bg-slate-950/30 border border-slate-800/80 rounded-3xl p-8 backdrop-blur-sm hover:border-purple-500/30 hover:bg-slate-950/60 transition-all duration-300 group"
+                    >
+                        <div className="w-12 h-12 rounded-xl bg-purple-950/50 border border-purple-500/20 flex items-center justify-center text-purple-400 mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <Zap size={22} />
+                        </div>
+                        <h4 className="text-xl font-bold text-slate-200 mb-3 group-hover:text-purple-400 transition-colors">Velocidad que Retiene Clientes</h4>
+                        <p className="text-slate-400 text-sm font-light leading-relaxed">
+                            Una página web que tarda más de 3 segundos en cargar pierde la mitad de sus clientes potenciales. Programamos con código optimizado de última generación, asegurando que tu sitio sea instantáneo en celulares y computadoras.
+                        </p>
+                    </motion.div>
 
-                                <p className="text-slate-300 italic text-sm leading-relaxed font-light mb-6">
-                                    "{test.comment}"
-                                </p>
-                            </div>
+                    {/* CARTA 3: SOPORTE */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.3 }}
+                        className="bg-slate-950/30 border border-slate-800/80 rounded-3xl p-8 backdrop-blur-sm hover:border-blue-500/30 hover:bg-slate-950/60 transition-all duration-300 group"
+                    >
+                        <div className="w-12 h-12 rounded-xl bg-blue-950/50 border border-blue-500/20 flex items-center justify-center text-blue-400 mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <ShieldCheck size={22} />
+                        </div>
+                        <h4 className="text-xl font-bold text-slate-200 mb-3 group-hover:text-blue-400 transition-colors">Soporte y Garantía Total</h4>
+                        <p className="text-slate-400 text-sm font-light leading-relaxed">
+                            No te dejamos solo después de entregar la página. Nos encargamos del hosting de alta velocidad, registro del dominio, certificados de seguridad SSL y brindamos soporte técnico continuo para que tu sitio web nunca deje de vender.
+                        </p>
+                    </motion.div>
 
-                            {/* PERFIL */}
-                            <div className="pt-4 border-t border-slate-900">
-                                <h5 className="font-bold text-slate-200 text-sm">{test.name}</h5>
-                                <p className="text-xs text-purple-400 font-medium mt-0.5">{test.role}</p>
-                            </div>
-
-                        </motion.div>
-                    ))}
                 </div>
             </section>
 
