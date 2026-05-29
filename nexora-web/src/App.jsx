@@ -1,6 +1,7 @@
 import { Menu, X } from "lucide-react"
 import { useState } from "react"
 import { motion } from "framer-motion"
+
 export default function App() {
 
     const handleSubmit = (e) => {
@@ -26,50 +27,38 @@ export default function App() {
     return (
 
         <div className="relative min-h-screen bg-black text-white overflow-hidden">
-            <div className="absolute inset-0 overflow-hidden">
 
-                <div className="absolute top-20 left-20 w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
-
-                <div className="absolute top-40 right-40 w-3 h-3 bg-purple-500 rounded-full animate-ping"></div>
-
-                <div className="absolute bottom-32 left-1/3 w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
-
-                <div className="absolute top-1/2 right-1/4 w-4 h-4 bg-cyan-300 rounded-full blur-sm animate-pulse"></div>
-
-                <div className="absolute bottom-20 right-20 w-2 h-2 bg-purple-400 rounded-full animate-ping"></div>
-
-            </div>
             {/* FONDO */}
-            <div className="absolute top-0 left-0 w-96 h-96 bg-cyan-500/20 blur-3xl rounded-full"></div>
+            <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-cyan-500/30 blur-3xl rounded-full z-0"></div>
 
-            <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/20 blur-3xl rounded-full"></div>
+            <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-purple-500/30 blur-3xl rounded-full"></div>
 
             {/* NAVBAR */}
             <nav className="
-      relative
-      z-10
-      flex
-      items-center
-      justify-between
-      px-8
-      py-5
-      border-b
-      border-cyan-500/10
-      bg-black/50
-      backdrop-blur-xl
-      ">
+            relative
+            z-20
+            flex
+            items-center
+            justify-between
+            px-8
+            py-5
+            border-b
+            border-cyan-500/10
+            bg-black
+            backdrop-blur-xl
+            ">
 
                 {/* LOGO */}
                 <div className="flex flex-col items-start select-none">
 
                     <h1
                         className="
-            text-3xl
-            md:text-5xl
-            font-black
-            uppercase
-            leading-none
-            "
+                        text-3xl
+                        md:text-5xl
+                        font-black
+                        uppercase
+                        leading-none
+                        "
                         style={{
                             fontFamily: "'Orbitron', sans-serif",
                             letterSpacing: "0.18em",
@@ -85,11 +74,11 @@ export default function App() {
 
                     <p
                         className="
-            text-ml
-            uppercase
-            font-bold
-            self-center
-            "
+                        text-lg
+                        uppercase
+                        font-bold
+                        self-center
+                        "
                         style={{
                             fontFamily: "'Orbitron', sans-serif",
                             letterSpacing: "0.5em",
@@ -131,25 +120,27 @@ export default function App() {
             </nav>
 
             {/* MENÚ MOBILE */}
-            {menuOpen && (
+            {
+                menuOpen && (
 
-                <div className="md:hidden bg-gray-900 border-b border-gray-800 px-8 py-6 flex flex-col gap-6 text-gray-300">
+                    <div className="md:hidden bg-gray-900 border-b border-gray-800 px-8 py-6 flex flex-col gap-6 text-gray-300">
 
-                    <a href="#inicio" className="hover:text-cyan-400 transition">
-                        Inicio
-                    </a>
+                        <a href="#inicio" className="hover:text-cyan-400 transition">
+                            Inicio
+                        </a>
 
-                    <a href="#servicios" className="hover:text-cyan-400 transition">
-                        Servicios
-                    </a>
+                        <a href="#servicios" className="hover:text-cyan-400 transition">
+                            Servicios
+                        </a>
 
-                    <a href="#contacto" className="hover:text-cyan-400 transition">
-                        Contacto
-                    </a>
+                        <a href="#contacto" className="hover:text-cyan-400 transition">
+                            Contacto
+                        </a>
 
-                </div>
+                    </div>
 
-            )}
+                )
+            }
 
             {/* HERO SECTION */}
             <motion.section
@@ -201,6 +192,7 @@ export default function App() {
             </motion.section>
 
             {/* SERVICIOS */}
+            <div className="absolute top-[900px] left-[-200px] w-[500px] h-[500px] bg-purple-400/10 blur-3xl rounded-full"></div>
             <section
                 id="servicios"
                 className="relative z-10 px-8 pb-24"
@@ -251,7 +243,9 @@ export default function App() {
                 </div>
 
             </section>
+
             {/* PROYECTOS */}
+            <div className="absolute top-[1700px] right-[-200px] w-[500px] h-[500px] bg-cyan-500/10 blur-3xl rounded-full"></div>
             <section className="relative z-10 px-8 py-24">
 
                 <h3 className="text-5xl font-bold text-center mb-6">
